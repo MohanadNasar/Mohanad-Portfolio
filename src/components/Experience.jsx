@@ -16,14 +16,17 @@ const ExperienceCard = ({ experience }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
-        background: "#1d1836",
-        color: "#fff",
+        background: "#0D0D0D",
+        color: "#00FF00",
+        border: "1px solid", 
+        borderImage: "linear-gradient(90.13deg, #00ce63 1.9%, #aaff00 97.5%)", 
+        borderImageSlice: 1, 
       }}
-      contentArrowStyle={{ borderRight: "7px solid  #232631" }}
+      contentArrowStyle={{ borderRight: "7px solid  #00FF00" }}
       date={experience.date}
       iconStyle={{ background: experience.iconBg }}
       icon={
-        <div className='flex justify-center items-center w-full h-full'>
+        <div className='flex justify-center items-center w-full h-full '>
           <img
             src={experience.icon}
             alt={experience.company_name}
@@ -60,7 +63,7 @@ const Experience = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} text-center`}>
+        <p className={`${styles.sectionSubText} text-center `}>
           What I have done so far
         </p>
         <h2 className={`${styles.sectionHeadText} text-center`}>

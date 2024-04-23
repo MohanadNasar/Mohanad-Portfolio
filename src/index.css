@@ -126,6 +126,12 @@
   -webkit-text-fill-color: transparent;
 }
 
+.experience-content {
+  border: 1px solid;
+  border-image: linear-gradient(90.13deg, #00ce63 1.9%, #aaff00 97.5%);
+  border-image-slice: 1;
+}
+
 /* canvas- styles */
 .canvas-loader {
   font-size: 10px;
