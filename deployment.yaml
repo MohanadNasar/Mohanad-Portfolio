@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mohanad-portfolio-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: mohanad-portfolio
+  template:
+    metadata:
+      labels:
+        app: mohanad-portfolio
+    spec:
+      containers:
+      - name: mohanad-portfolio
+        image: mohanadnassar/mohanad-portfolio:latest
+        ports:
+        - containerPort: 80
