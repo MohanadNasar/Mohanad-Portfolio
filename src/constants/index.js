@@ -116,7 +116,7 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "Feb 2023 - June 2023",
     points: [
-      "Enhanced first-year students' problem-solving abilities through guided lab sessions.",
+      "Enhanced first-year students' problem-solving abilities through guided lab sessions",
       "Facilitated improvement in students' critical thinking skills, while also guiding them in writing clean and maintainable code.",
       "Provided support and assistance to students, ensuring successful completion of projects.",
     ],
