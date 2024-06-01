@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: mohanad-portfolio-service
+  namespace: default
 spec:
   selector:
     app: mohanad-portfolio
@@ -9,5 +10,4 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
-      nodePort: 30007 # You can specify a port or let Kubernetes choose
-  type: NodePort
+  type: ClusterIP

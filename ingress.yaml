@@ -7,8 +7,7 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: 141.72.13.250
-    http:
+  - http:
       paths:
       - path: /
         pathType: Prefix
@@ -16,4 +15,4 @@ spec:
           service:
             name: mohanad-portfolio-service
             port:
-              number: 30007
+              number: 80
