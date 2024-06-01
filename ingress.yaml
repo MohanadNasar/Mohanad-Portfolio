@@ -1,12 +1,13 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: mohanad-portfolio-ingress
+  name: portfolio-ingress
+  namespace: default
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: 141.72.13.250.nip.io
+  - host: 141.72.13.250
     http:
       paths:
       - path: /
@@ -15,4 +16,4 @@ spec:
           service:
             name: mohanad-portfolio-service
             port:
-              number: 80
+              number: 30007
