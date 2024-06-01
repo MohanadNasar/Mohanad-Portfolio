@@ -12383,3 +12383,34 @@ spec:
       volumes:
       - emptyDir: {}
         name: temp
+
+---        
+
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: mohanad-portfolio
+  namespace: flux-system
+spec:
+  interval: 5m
+  url: https://github.com/MohanadNasar/Mohanad-Portfolio/clusters/staging/mohanad-portfolio
+  ref:
+    branch: main
+
+---
+
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: mohanad-portfolio
+  namespace: mohanad-portfolio
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: mohanad-portfolio
+      sourceRef:
+        kind: HelmRepository
+        name: mohanad-portfolio
+  values:
+    replicaCount: 3
