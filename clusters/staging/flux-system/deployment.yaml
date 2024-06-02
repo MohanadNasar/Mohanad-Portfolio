@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: mohanad-portfolio
-        image: mohanadnassar/mohanad-portfolio:latest
+        image: mohanadnassar/mohanad-portfolio:20240602
         imagePullPolicy: Always
         ports:
         - containerPort: 80
