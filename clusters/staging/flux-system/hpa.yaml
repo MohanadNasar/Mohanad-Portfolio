@@ -1,4 +1,4 @@
-apiversion: autoscaling/v2beta2
+apiversion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
   name: mohanad-portfolio-hpa
