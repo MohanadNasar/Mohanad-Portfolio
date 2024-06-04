@@ -26,3 +26,4 @@ spec:
   sourceRef:
     kind: GitRepository
     name: mohanad-portfolio
+    
