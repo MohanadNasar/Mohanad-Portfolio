@@ -1,4 +1,4 @@
-apiversion: autoscaling/v1
+apiversion: autoscaling/v2beta2
 kind: HorizontalPodAutoscaler
 metadata:
   name: mohanad-portfolio-hpa
@@ -11,4 +11,10 @@ spec:
   minReplicas: 1
   maxReplicas: 10
   targetCPUUtilizationPercentage: 50
+```
+
+
+
+
+
   
