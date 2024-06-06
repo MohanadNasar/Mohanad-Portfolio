@@ -4,6 +4,11 @@ kind: GitRepository
 metadata:
   name: mohanad-portfolio
   namespace: flux-system
+  labels:
+    app.kubernetes.io/managed-by: "Helm"
+  annotations:
+    meta.helm.sh/release-name: "mohanad-portfolio"
+    meta.helm.sh/release-namespace: "default"
 spec:
   interval: 5m
   ref:
