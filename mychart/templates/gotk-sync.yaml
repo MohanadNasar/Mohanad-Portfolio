@@ -1,0 +1,48 @@
+# gotk-sync.yaml
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: mohanad-portfolio
+  namespace: flux-system
+spec:
+  interval: 5m
+  ref:
+    branch: main
+  secretRef:
+    name: flux-system
+  url: https://github.com/MohanadNasar/Mohanad-Portfolio
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: mohanad-portfolio
+  namespace: flux-system
+spec:
+  interval: 10m
+  chart:
+    spec:
+      chart: ./mychart
+      sourceRef:
+        kind: GitRepository
+        name: mohanad-portfolio
+      version: "*"
+  values:
+    replicaCount: 1
+    image:
+      repository: mohanadnassar/mohanad-portfolio
+      pullPolicy: Always
+      tag: latest
+    service:
+      type: ClusterIP
+      port: 80
+    ingress:
+      enabled: true
+      className: ""
+      annotations:
+        nginx.ingress.kubernetes.io/rewrite-target: /
+      hosts:
+        - host: mohanad-portfolio.com
+          paths:
+            - path: /
+              pathType: Prefix
+      tls: []
