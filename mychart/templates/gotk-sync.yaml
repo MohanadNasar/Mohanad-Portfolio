@@ -1,4 +1,3 @@
-# gotk-sync.yaml
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
@@ -15,6 +14,7 @@ spec:
   secretRef:
     name: flux-system  # This secret should exist in the default namespace
   url: https://github.com/MohanadNasar/Mohanad-Portfolio
+
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
