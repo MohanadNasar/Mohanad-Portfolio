@@ -4,6 +4,10 @@ kind: GitRepository
 metadata:
   name: mohanad-portfolio
   namespace: default
+  labels:
+    app.kubernetes.io/managed-by: Helm
+    meta.helm.sh/release-name: mohanad-portfolio
+    meta.helm.sh/release-namespace: default
 spec:
   interval: 5m
   ref:
