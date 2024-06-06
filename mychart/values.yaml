@@ -49,7 +49,7 @@ ingress:
   annotations: 
     nginx.ingress.kubernetes.io/rewrite-target: /
   hosts:
-    - host: 141.72.13.250
+    - host: mohanad-portfolio.com
       paths:
         - path: /
           pathType: Prefix
