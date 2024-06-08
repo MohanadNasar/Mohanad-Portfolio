@@ -1,20 +1,16 @@
+# gotk-sync.yaml
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
   name: mohanad-portfolio
   namespace: default
-  labels:
-    app.kubernetes.io/managed-by: Helm
-    meta.helm.sh/release-name: mohanad-portfolio
-    meta.helm.sh/release-namespace: default
 spec:
   interval: 5m
   ref:
     branch: main
   secretRef:
-    name: flux-system  # This secret should exist in the default namespace
+    name: my-new-secret  # Use the new secret here
   url: https://github.com/MohanadNasar/Mohanad-Portfolio
-
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
@@ -29,6 +25,7 @@ spec:
       sourceRef:
         kind: GitRepository
         name: mohanad-portfolio
+        namespace: default
       version: "*"
   values:
     replicaCount: 1
