@@ -42,7 +42,7 @@ spec:
     image:
       repository: mohanadnassar/mohanad-portfolio
       pullPolicy: Always
-      tag: latest
+      tag: latest1
     service:
       type: ClusterIP
       port: 80

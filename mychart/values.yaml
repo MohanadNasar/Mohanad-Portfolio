@@ -8,7 +8,7 @@ image:
   repository: mohanadnassar/mohanad-portfolio
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: latest
+  tag: latest1
 
 imagePullSecrets: []
 nameOverride: ""
