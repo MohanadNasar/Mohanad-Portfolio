@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   repository: mohanadnassar/mohanad-portfolio
   pullPolicy: Always
-  tag: latest1
+  tag: latest
 
 service:
   type: ClusterIP
