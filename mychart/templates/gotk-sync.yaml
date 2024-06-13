@@ -56,4 +56,9 @@ spec:
           paths:
             - path: /
               pathType: Prefix
+              backend:
+                service:
+                  name: mohanad-portfolio-mychart
+                  port:
+                    number: 80
       tls: []
